@@ -1,0 +1,20 @@
+﻿@model People
+    
+@{
+    ViewData["Title"] = "Add People;
+}
+<h2>People List</h2>
+<a asp-controller="People" asp-action="create">Create people</a>
+<div class="col-10">
+    <div class="row">
+        <div class="Col-2">Id</div>
+        <div class="col-3">Name</div>
+        <div class="col-3">Phone</div>
+        <div class="col-3">Citties</div>
+    </div>
+    @foreach (var item in Model)
+    {
+        <Partial name="_PeopleRow" model="Item" />
+
+    }
+</div>
